@@ -1,0 +1,23 @@
+{
+  "name": "petfinder-api-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "animals.js",
+  "scripts": {
+    "browsersync": "browser-sync start --proxy localhost:3000 --files 'public'",
+    "nodemon": "nodemon server.js -e js,css,html",
+    "start_b": "concurrently --kill-others \"npm run nodemon\" \"npm run browsersync\" ",
+    "start": "npm-run-all -p nodemon browsersync"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "dotenv": "^16.0.0",
+    "npm-run-all": "^4.1.5"
+  }
+}
